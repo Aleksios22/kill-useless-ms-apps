@@ -1,4 +1,4 @@
-#Empêcher OneDrive de s'exécuter en arrière-plan
+#Script qui emêche OneDrive et Edge de s'exécuter en arrière plan
 
 #Fermer OneDrive
 Write-Host "Fermeture de OneDrive..."
@@ -41,4 +41,4 @@ schtasks /Change /TN "Microsoft\Windows\MicrosoftEdgeUpdate\MicrosoftEdgeUpdateT
 reg add "HKCU\Software\Microsoft\Edge" /v "StartupBoostEnabled" /t REG_DWORD /d 0 /f
 reg add "HKCU\Software\Policies\Microsoft\Edge" /v "BackgroundModeEnabled" /t REG_DWORD /d 0 /f
 
-Write-Host "Edge stopped and auto-start disabled. Reboot recommended."
+Write-Host "Edge a été arrêté et ne redémarrera plus. Un redémarrage est recommandé."
